@@ -17,6 +17,7 @@
             </div>
             <h4>布头儿</h4>
         </div>
+
         <!-- 导航菜单 -->
         <?php include("./views/common/aside.html");?>
     <!-- 主体 -->
@@ -64,9 +65,9 @@
             </div>
         </div>
     </div>
-
-        <?php include("./views/common/script.html");?>
-    <script>
+      <?php include("./views/common/script.html");?>
+    </div>
+        <script>
 
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
@@ -95,5 +96,6 @@
         myChart.setOption(option);
 
     </script>
+
 </body>
 </html>

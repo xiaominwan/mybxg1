@@ -6,3 +6,18 @@
 	$('.navs ul').prev('a').on('click', function () {
 		$(this).next().slideToggle();
 	});
+	$("#logoutbtn").click(function(){
+		$.ajax({
+			type:"post",
+			url:"/api/logout",
+			dataType:"json",
+			success:function(data){
+				if(data.code==200){
+					location.href="/main/login"
+				}
+
+			}
+
+		})
+		return false;
+	})
