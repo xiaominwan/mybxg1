@@ -2,6 +2,8 @@
  * Created by Administrator on 2017/8/30 0030.
  */
 define(["jquery","template","util","bootstrap"],function($,template,util){
+    var ret=util.qs("key");
+
     //调用后台接口获取列表数据
     //console.log(location.pathname);
     //设置导航菜单高亮显示
@@ -24,7 +26,7 @@ util.setMenu(location.pathname);
                     data:{tc_id:tcId},
                     dataType: "json",
                     success: function (data) {
-                        console.log(data);
+
                         //解析数据渲染页面
                         var html = template("modalTpl", data.result);
                         $("#modalInfo").html(html);
@@ -50,7 +52,7 @@ util.setMenu(location.pathname);
                     data:{tc_id:tcId,tc_status:tcStatus},
                     success:function(data){
                        if(data.code==200){
-                           console.log(data);
+
                            //修改当前的转态
                            td.attr("data-status",data.result.tc_status);
                            //修改文字信息
