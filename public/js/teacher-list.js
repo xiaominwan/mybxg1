@@ -1,9 +1,11 @@
 /**
  * Created by Administrator on 2017/8/30 0030.
  */
-define(["jquery","template","bootstrap"],function($,template){
+define(["jquery","template","util","bootstrap"],function($,template,util){
     //调用后台接口获取列表数据
-
+    //console.log(location.pathname);
+    //设置导航菜单高亮显示
+util.setMenu(location.pathname);
     $.ajax({
         type:"get",
         url:"/api/teacher",
