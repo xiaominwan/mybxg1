@@ -14,7 +14,7 @@ define(["jquery"],function($){
 
                 if(data.code == 200){
                     $.cookie("loginInfo",JSON.stringify(data.result),{path:"/"});
-                    console.log(JSON.stringify(data.result))
+
                     // 登录成功，跳转到主页面
                     location.href = '/main/index'
                 }else{

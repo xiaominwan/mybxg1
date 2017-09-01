@@ -2,10 +2,10 @@
  * Created by Administrator on 2017/8/30 0030.
  */
 define(["jquery","template","util","bootstrap"],function($,template,util){
-    var ret=util.qs("key");
+
 
     //调用后台接口获取列表数据
-    //console.log(location.pathname);
+
     //设置导航菜单高亮显示
 util.setMenu(location.pathname);
     $.ajax({
@@ -13,20 +13,20 @@ util.setMenu(location.pathname);
         url:"/api/teacher",
         dataType:"json",
         success:function(data) {
+            console.log(data);
             var html = template("teacherTpl", {list: data.result});
             $("#teacherInfo").html(html);
             //预览单机事件
             $(".preview").click(function () {
                 var td = $(this).closest("td");
                 var tcId = td.attr("data-tcId");
-                //根据id查询数据
+                //根据id查询数据xxx
                 $.ajax({
                     type: "get",
                     url: "/api/teacher/view",
                     data:{tc_id:tcId},
                     dataType: "json",
                     success: function (data) {
-
                         //解析数据渲染页面
                         var html = template("modalTpl", data.result);
                         $("#modalInfo").html(html);
@@ -40,7 +40,6 @@ util.setMenu(location.pathname);
 
             })
             $(".eod").click(function(){
-
                 var td=$(this).closest("td");
                 var tcId=td.attr("data-tcId");
                 var tcStatus=td.attr("data-status");
