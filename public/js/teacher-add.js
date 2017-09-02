@@ -1,6 +1,7 @@
 define(["jquery","template","util","datepicker","language","validate","form"],function($,template,util){
     //z设置菜单选中
     util.setMenu("/teacher/list");
+    //获取当前列表的id的值
     var tcId=util.qs("tc_id");
     if(tcId){
         //编辑操作
