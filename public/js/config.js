@@ -17,7 +17,8 @@ require.config({
         util:"../js/util",
         teacherlist:"../js/teacher-list",
         teacheradd:"../js/teacher-add",
-        form:"jquery-form/jquery.form"
+        form:"jquery-form/jquery.form",
+        setting:"../js/settings"
 
 
     },
