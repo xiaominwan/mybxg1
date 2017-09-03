@@ -6,7 +6,7 @@ define(["jquery"],function($){
     return {
         setMenu:function(path){
             //设置导航菜单选中
-            $('.navs a[href="'+path+'"]').addClass("active");
+            $('.navs a[href="'+path+'"]').addClass("active").closest("ul").show();
 
         },
         qs:function(key){

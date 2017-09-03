@@ -24,6 +24,7 @@ require.config({
         ckeditor:"ckeditor/ckeditor",
         setting:"../js/settings",
         state:"../js/state",
+        courselist:"../js/course-list",
 
 
 
