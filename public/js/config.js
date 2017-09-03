@@ -11,6 +11,7 @@ require.config({
         datepicker:"bootstrap-datepicker/js/bootstrap-datepicker",
         language:"bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min",
         uploadify:"uploadify/jquery.uploadify",
+        nprogress:"nprogress/nprogress",
         validate:"validate/jquery-validate.min",
         common:"../js/common",
         login:"../js/login",
@@ -22,6 +23,7 @@ require.config({
         region:"jquery-region/jquery.region",
         ckeditor:"ckeditor/ckeditor",
         setting:"../js/settings",
+        state:"../js/state",
 
 
 

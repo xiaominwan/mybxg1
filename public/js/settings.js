@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/9/2 0002.
  */
-define(["jquery","template","util","ckeditor","uploadify","datepicker","language","region","validate","form"],function($,template,util,CKEDITOR){
+define(["jquery","template","util","ckeditor","uploadify","datepicker","language","region","validate","form","state"],function($,template,util,CKEDITOR){
     //设置导航栏选中的菜单
     util.setMenu("/main/index");
     //调用后台接口填充表单

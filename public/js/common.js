@@ -1,4 +1,7 @@
-define(["jquery","template","cookie"],function($,template){
+define(["jquery","template","nprogress","cookie"],function($,template,NProgress){
+	//控制顶部的进度条
+	NProgress.start();
+	NProgress.done();
 	$('.navs ul').prev('a').on('click', function () {
 		$(this).next().slideToggle();
 	});
@@ -36,8 +39,6 @@ define(["jquery","template","cookie"],function($,template){
 	//$(".profile img").attr("src",info.tc_avatar);
 	//$(".profile h4").html(info.tc_name);
 });
-	//NProgress.start();
-    //
-	//NProgress.done();
+
 
 

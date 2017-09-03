@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/8/30 0030.
  */
-define(["jquery","template","util","bootstrap"],function($,template,util){
+define(["jquery","template","util","bootstrap","state"],function($,template,util){
 
 
     //调用后台接口获取列表数据
