@@ -10,6 +10,7 @@ require.config({
         bootstrap:"bootstrap/js/bootstrap.min",
         datepicker:"bootstrap-datepicker/js/bootstrap-datepicker",
         language:"bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min",
+        uploadify:"uploadify/jquery.uploadify",
         validate:"validate/jquery-validate.min",
         common:"../js/common",
         login:"../js/login",
@@ -18,7 +19,10 @@ require.config({
         teacherlist:"../js/teacher-list",
         teacheradd:"../js/teacher-add",
         form:"jquery-form/jquery.form",
-        setting:"../js/settings"
+        region:"jquery-region/jquery.region",
+        ckeditor:"ckeditor/ckeditor",
+        setting:"../js/settings",
+
 
 
     },
@@ -32,6 +36,12 @@ require.config({
 
         validate:{
             deps:["jquery"]
+        },
+        uploadify:{
+            deps:["jquery"]
+        },
+        ckeditor:{
+            exports:"CKEDITOR"
         }
 
     }
