@@ -62,7 +62,8 @@ define(["jquery","template","util","ckeditor","validate","form"],function($,temp
                     data:{cs_id:csid},
                     dataType:"json",
                     success:function(data){
-                        location.href="/course/picture?cs_id"+data.result.cs_id;
+                        console.log(data);
+                        location.href="/course/picture?cs_id="+data.result.cs_id;
                     }
                 })
 
