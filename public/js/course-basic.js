@@ -1,9 +1,10 @@
 /**
  * Created by Administrator on 2017/9/4 0004.
  */
-define(["jquery","template","util"],function($,template,util){
+define(["jquery","template","util","ckeditor","validate","form"],function($,template,util,CKEDITOR){
    //设置导航栏菜单选中
     util.setMenu("/course/add");
+    //获取课程ID
     var csid=util.qs("cs_id");
 
     //湖区添加和编辑的标志位
@@ -42,6 +43,30 @@ define(["jquery","template","util"],function($,template,util){
                 }
                 })
 
+            });
+            //处理富文本
+            CKEDITOR.replace("ckeditor");
+            //处理表单提交
+            $("#basicForm").validate({
+                sendForm:false,
+                //处理富文本提交
+
+            valid:function(){
+                for(var instance in CKEDITOR.instances){
+                    CKEDITOR.instances[instance].updateElement();
+
+                }
+                $(this).ajaxSubmit({
+                    type:"post",
+                    url:"/api/course/update/basic",
+                    data:{cs_id:csid},
+                    dataType:"json",
+                    success:function(data){
+                        location.href="/course/picture?cs_id"+data.result.cs_id;
+                    }
+                })
+
+            }
             })
         }
     })
