@@ -22,6 +22,7 @@ define(["jquery","template","util","ckeditor","validate","form"],function($,temp
             }else{
                 data.result.operate="课程添加"
             }
+            //渲染页面
             var html=template("basicTpl",data.result);
 
             $("#basicInfo").html(html);

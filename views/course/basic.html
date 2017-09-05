@@ -89,7 +89,7 @@
                             <select name="" class="form-control input-sm">
                                 <option value="0">请选择讲师</option>
                                {{each teacher}}
-                                <option {{if cs_tc_id==$value.tc_id}}selected{{/if}} value= "{{$value.tc_id}}">{{$value.tc_name}}</option>
+                                <option {{if cs_tc_id==$value.tc_id}}selected{{/if}} value="{{$value.tc_id}}">{{$value.tc_name}}</option>
                                 {{/each}}
                             </select>
                         </div>
@@ -101,7 +101,7 @@
                                 <option value="">请选择一级分类..</option>
                                 {{if category}}
                                 {{each category.top}}
-                                <option {{if cs_cg_pid==$value.cg_id}}selected{{/if}} value= "{{$value.cg_id}}">{{$value.cg_name}}</option>
+                                <option {{if cs_cg_pid==$value.cg_id}}selected{{/if}} value="{{$value.cg_id}}">{{$value.cg_name}}</option>
                                 {{/each}}
                                 {{/if}}
                             </select>
@@ -111,7 +111,7 @@
                                 {{each category.childs}}
                                 <option value="{{$value.cg_id}}" {{if cs_cg_id==$value.cg_id}}selected{{/if}}>{{$value.cg_name}}</option>
                                 {{/each}}
-                                {{/if}}
+                                {{/if}}/
                             </select>
                         </div>
                     </div>
@@ -125,7 +125,6 @@
                     <div class="form-group">
                         <div class="col-xs-10">
                             <input type="submit" value="保存" class="btn btn-success btn-sm pull-right">
-
                         </div>
                     </div>
                 </form>
